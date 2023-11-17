@@ -34,6 +34,13 @@ const styles = StyleSheet.create({
     alignItems:'center'
   },
 
+  imageIcon:{
+    width: 50,
+    height: 50,
+  },
+
+
+
   //noteContainer
   noteContainer:{
     flex: 0.95,

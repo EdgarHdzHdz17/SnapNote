@@ -1,10 +1,15 @@
-// MyModal.js
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, Image, TouchableOpacity, Modal } from "react-native";
 import styles from "./ModalUserStyles";
-import { AntDesign } from '@expo/vector-icons';
+import { AntDesign } from "@expo/vector-icons";
 
-const MyModal = ({ modalVisible, closeModal }) => {
+const MyModal = ({ modalVisible, closeModal,notes,onNameSelected }) => {
+
+  const handleNameSelection = (name) => {
+    onNameSelected(name);
+    closeModal();
+  };
+
   return (
     <Modal
       animationType="slide"
@@ -15,12 +20,24 @@ const MyModal = ({ modalVisible, closeModal }) => {
       <View style={styles.modalContainer}>
         <View style={styles.modalContent}>
           <Text style={styles.headerText}>MY NOTES:</Text>
-          <Image
-            style={styles.noteWallpaper}
-            source={require("./ModalUserScreenImages/noteWallpaper.png")}
-          />
+          <View style={styles.noteListContainer}>
+            {notes.map((note, index) => (
+               <TouchableOpacity
+               key={index}
+               style={styles.noteItem}
+               onPress={() => handleNameSelection(note.name)}
+             >
+               <Text style={styles.noteListText}>{note.name}</Text>
+             </TouchableOpacity>
+            ))}
+          </View>
           <TouchableOpacity onPress={closeModal}>
-            <AntDesign style={styles.iconClose} name="closecircle" size={24} color="gray" />
+            <AntDesign
+              style={styles.iconClose}
+              name="closecircle"
+              size={24}
+              color="gray"
+            />
           </TouchableOpacity>
         </View>
       </View>

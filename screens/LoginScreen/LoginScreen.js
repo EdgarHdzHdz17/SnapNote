@@ -7,12 +7,12 @@ import { useNavigation } from "@react-navigation/native";
 
 export default function LoginScreen() {
 
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const navigation = useNavigation();
 
   const verifyFormulary = () => {
-    Formulary(email, password, setEmail, setPassword, navigateToAnotherScreen);
+    Formulary(name, password, setName, setPassword, navigateToAnotherScreen);
   };
 
   const navigateToAnotherScreen = () => {
@@ -39,15 +39,15 @@ export default function LoginScreen() {
 
         <View style={styles.formularyContainer}>
           <Text style={styles.info}>Account Login</Text>
-          <Text style={styles.textForm}>Email Addres</Text>
+          <Text style={styles.textForm}>User Name:</Text>
           <TextInput
             style={styles.inputEmail}
-            value={email}
-            onChangeText={setEmail}
+            value={name}
+            onChangeText={setName}
             inputMode='email'
             placeholder="Type something..."
           />
-          <Text style={styles.textForm}>Password</Text>
+          <Text style={styles.textForm}>Password:</Text>
           <TextInput
             style={styles.inputPassword}
             value={password}

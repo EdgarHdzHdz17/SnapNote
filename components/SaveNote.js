@@ -1,6 +1,7 @@
 import {Alert} from 'react-native';
 
-const SaveNote = (textName, setTextName,textNote,setTextNote) => {
+const SaveNote = (textName, setTextName,textNote,setTextNote,notes,setNotes) => {
+
     if (textName.trim() === "") {
       Alert.alert("Missing Name Note");
     } else if (textNote.trim() === "") {
@@ -8,7 +9,9 @@ const SaveNote = (textName, setTextName,textNote,setTextNote) => {
     } else {
       setTextName("");
       setTextNote("");
-      console.log("Save Note... \n name:",textName,"\n text:",textNote)
+      const newNote = {name: textName, text: textNote};
+      console.log("New Note: ",newNote);
+      setNotes((prevNotes) => [...prevNotes, newNote]);
     }
   };
   

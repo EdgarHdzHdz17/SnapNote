@@ -1,23 +1,33 @@
-import { Text, View, TouchableOpacity, TextInput, Modal} from "react-native";
+import { Text, View, TouchableOpacity, TextInput, Modal,Image,} from "react-native";
 import styles from "../HomeScreen/HomeScreenStyles";
-import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
-import { FontAwesome } from '@expo/vector-icons'; 
 import MyModal from "../ModalUser/ModalUserScreen";
 import { SaveNote } from '../../components/SaveNote';
 import { ClearNote } from "../../components/ClearNote";
+import { LoadNote } from "../../components/LoadNote";
 
 export default function HomeScreen() {
   const [textName, setTextName] = useState("");
   const [textNote, setTextNote] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
+  const [notes, setNotes] = useState([]);
+  const [selectedNote, setSelectedNote] = useState(null);
 
   const saveNote = () => {
-    SaveNote(textName, setTextName, textNote, setTextNote);
+    SaveNote(textName, setTextName, textNote, setTextNote, notes, setNotes);
   };
 
   const clearNote = () => {
     ClearNote(textName, setTextName, textNote, setTextNote);
+  };
+
+  const handleNameSelected = (name) => {
+    const selectedNote = notes.find((note) => note.name === name);
+    if (selectedNote) {
+      setSelectedNote(selectedNote);
+      setTextName(selectedNote.name);
+      setTextNote(selectedNote.text);
+    }
   };
 
   const openModal = () => {
@@ -32,11 +42,14 @@ export default function HomeScreen() {
     <View style={styles.container}>
       <View style={styles.headerContainer}>
         <View style={styles.headerText}>
-          <Text style={styles.text}>Welcome</Text>
+          <Text style={styles.text}>Welcome: </Text>
         </View>
 
         <View style={styles.iconUser}>
-          <FontAwesome name="user-circle" size={55} color="black" onPress={openModal} />
+          <TouchableOpacity onPress={openModal}>
+            <Image style={styles.imageIcon} source={require('../HomeScreen/HomeScreenImages/SnapNoteIcon.png')} />
+          </TouchableOpacity>
+          
         </View>
         
       </View>
@@ -67,7 +80,7 @@ export default function HomeScreen() {
         </View>
       </View>
 
-      <MyModal modalVisible={modalVisible} closeModal={closeModal} />
+      <MyModal modalVisible={modalVisible} closeModal={closeModal} notes={notes} onNameSelected={handleNameSelected}/>
 
     </View>
   );

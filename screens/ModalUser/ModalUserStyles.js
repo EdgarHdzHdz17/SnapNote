@@ -17,22 +17,29 @@ const styles = StyleSheet.create({
     },
 
     headerText:{
-      color:'white',
+      color:'#BC7AF9',
       fontSize:30,
     },
     
-    noteWallpaper:{
-      marginTop:10,
-      width:200,
-      height:200,
-      opacity:0.3,
-      position:'relative',
-      marginLeft:30
+    noteListContainer:{
+      justifyContent:"center",
+      alignContent:'center'
+    },
+
+    noteListText:{
+      marginTop:5,
+      fontSize:25,
+      color:'white'
     },
 
     iconClose: {
       marginTop: 10,
     },
+
+    listNotes:{
+      backgroundColor:'red'
+    }
+
   });
 
 
