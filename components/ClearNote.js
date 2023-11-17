@@ -8,7 +8,7 @@ const ClearNote = (textName, setTextName,textNote,setTextNote) => {
     } else {
       setTextName("");
       setTextNote("");
-      Alert.alert("The note was deleted");
+      Alert.alert("The note was cleaned");
       console.log("Clear Note...")
     }
   };
