@@ -4,7 +4,6 @@ import LoginScreen from './screens/LoginScreen/LoginScreen';
 import HomeScreen from './screens/HomeScreen/HomeScreen';
 import ModalUserScreen from './screens/ModalUser/ModalUserScreen';
 
-
 export default function App() {
 
   const Stack = createNativeStackNavigator();

@@ -3,14 +3,15 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#9370db',
+    backgroundColor: '#BC7AF9',
     alignItems:'center',
   },
 
-  //headerContainer
-  headerContainer: {
-    height:'15%',
+  //animationContainer
+  animationContainer:{
     width:'99%',
+    height:'40%',
+    alignItems: 'center',
   },
 
   headerText: {
@@ -20,12 +21,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
 
-  //animationContainer
-  animationContainer:{
-    width:'99%',
-    height:'30%',
-    justifyContent:'center',
-    alignItems: 'center',
+  lottieArchive:{
+    width: 300,
+    height:200,
   },
 
   info: {
@@ -38,6 +36,7 @@ const styles = StyleSheet.create({
     width:'100%',
     flex:1,
     alignItems:'center',
+    marginTop:5,
   },
 
   textForm:{
@@ -50,7 +49,7 @@ const styles = StyleSheet.create({
   },
 
   inputEmail:{
-    height: '15%',
+    height: '20%',
     width:'80%',
     borderColor: 'gray', 
     backgroundColor:'white',
@@ -62,7 +61,7 @@ const styles = StyleSheet.create({
   },
 
   inputPassword:{
-    height: '15%',
+    height: '20%',
     width:'80%', 
     borderColor: 'gray', 
     backgroundColor:'white',
@@ -84,9 +83,7 @@ const styles = StyleSheet.create({
   bottomText:{
     color: 'white', 
     textAlign: 'center',
-  },
-  
-  
+  }, 
 
 });
 

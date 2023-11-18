@@ -39,8 +39,6 @@ const styles = StyleSheet.create({
     height: 50,
   },
 
-
-
   //noteContainer
   noteContainer:{
     flex: 0.95,

@@ -1,13 +1,15 @@
 import { StyleSheet } from "react-native";
 
-
 const styles = StyleSheet.create({
+
+  //modalCobtainer
     modalContainer: {
       flex: 1,
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: "rgba(0, 0, 0, 0.5)",
     },
+    
     modalContent: {
       backgroundColor: "#dda0dd",
       padding: 20,
@@ -21,6 +23,7 @@ const styles = StyleSheet.create({
       fontSize:30,
     },
     
+    //noteListContainer
     noteListContainer:{
       justifyContent:"center",
       alignContent:'center'

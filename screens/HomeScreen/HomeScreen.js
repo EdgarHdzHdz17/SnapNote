@@ -1,10 +1,9 @@
-import { Text, View, TouchableOpacity, TextInput, Modal,Image,} from "react-native";
+import { Text, View, TouchableOpacity, TextInput,Image,} from "react-native";
 import styles from "../HomeScreen/HomeScreenStyles";
 import React, { useState } from "react";
 import MyModal from "../ModalUser/ModalUserScreen";
 import { SaveNote } from '../../components/SaveNote';
 import { ClearNote } from "../../components/ClearNote";
-import { LoadNote } from "../../components/LoadNote";
 
 export default function HomeScreen() {
   const [textName, setTextName] = useState("");
@@ -42,7 +41,7 @@ export default function HomeScreen() {
     <View style={styles.container}>
       <View style={styles.headerContainer}>
         <View style={styles.headerText}>
-          <Text style={styles.text}>Welcome: </Text>
+          <Text style={styles.text}>Welcome</Text>
         </View>
 
         <View style={styles.iconUser}>
