@@ -7,9 +7,9 @@
     "icon": "./assets/SnapNoteIcon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/SnapNoteIcon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#BC7AF9"
     },
     "assetBundlePatterns": [
       "**/*"
