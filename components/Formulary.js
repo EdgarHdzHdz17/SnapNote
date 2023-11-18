@@ -2,9 +2,9 @@ import { Alert } from "react-native";
 
 const Formulary = (nameUser, password, setNameUser, setPassword, navigateToAnotherScreen) => {
   if (nameUser.trim() === "") {
-    Alert.alert("Missing email");
+    Alert.alert('Need User Name',"Add a name.");
   } else if (password.trim() === "") {
-    Alert.alert("Missing Password");
+    Alert.alert('Need Password',"Add a password.");
   } else {
     setNameUser("");
     setPassword("");

@@ -3,9 +3,9 @@ import {Alert} from 'react-native';
 const SaveNote = (textName, setTextName,textNote,setTextNote,notes,setNotes) => {
 
     if (textName.trim() === "") {
-      Alert.alert("Missing Name Note");
+      Alert.alert('Need Name Note',"Add a name.");
     } else if (textNote.trim() === "") {
-      Alert.alert("Missing Text in Note");
+      Alert.alert('Need Text Note',"Add a text.");
     } else {
       setTextName("");
       setTextNote("");

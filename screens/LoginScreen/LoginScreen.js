@@ -4,7 +4,8 @@ import LottieView from 'lottie-react-native'
 import React, { useState } from 'react';
 import { Formulary } from '../../components/Formulary';
 import { useNavigation } from "@react-navigation/native";
-import { AntDesign } from '@expo/vector-icons'; 
+import { AntDesign } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 
 export default function LoginScreen() {
 
@@ -36,22 +37,31 @@ export default function LoginScreen() {
       <View style={styles.formularyContainer}>
         <Text style={styles.info}>Account Login</Text>
         <Text style={styles.textForm}>User Name:</Text>
-        <TextInput
+        
+        <View style={styles.userNameContainer}>
+          <AntDesign name="user" size={24} color="gray" />
+          <TextInput
           style={styles.inputEmail}
           value={nameUser}
           onChangeText={setNameUser}
           inputMode='email'
           placeholder="Type something..."
         />
+        </View>
+        
         <Text style={styles.textForm}>Password:</Text>
-        <TextInput
+        
+        <View style={styles.passwordContainer}>
+        <Feather name="lock" size={24} color="gray" />
+          <TextInput
           style={styles.inputPassword}
           value={password}
           onChangeText={setPassword}
           secureTextEntry={true}
           inputMode='text'
           placeholder="Type something..."
-        />
+          />
+        </View>
 
         <TouchableOpacity style={styles.bottomLogin} onPress={verifyFormulary}>
           <Text style={styles.bottomText}>Login</Text>

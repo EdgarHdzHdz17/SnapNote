@@ -48,28 +48,40 @@ const styles = StyleSheet.create({
     marginTop:5,
   },
 
-  inputEmail:{
-    height: '20%',
-    width:'80%',
-    borderColor: 'gray', 
+  userNameContainer:{
+    flexDirection:'row',
     backgroundColor:'white',
+    justifyContent:'center',
+    alignItems:'center',
+    borderColor: 'gray', 
     borderWidth: 1,
     borderRadius: 8,
-    marginBottom: 10, 
-    padding: 10, 
+    height: '20%',
     marginTop:10,
   },
 
-  inputPassword:{
-    height: '20%',
-    width:'80%', 
-    borderColor: 'gray', 
+  passwordContainer:{
+    flexDirection:'row',
     backgroundColor:'white',
+    justifyContent:'center',
+    alignItems:'center',
+    borderColor: 'gray', 
     borderWidth: 1,
     borderRadius: 8,
-    marginBottom: 10, 
-    padding: 10, 
+    height: '20%',
     marginTop:10,
+  },
+
+  inputEmail:{
+    height: '90%',
+    width:'80%',
+    padding: 10,
+  },
+
+  inputPassword:{
+    height: '90%',
+    width:'80%',
+    padding: 10,
   },
 
   bottomLogin:{
@@ -77,7 +89,7 @@ const styles = StyleSheet.create({
     width:'60%', 
     padding: 10, 
     borderRadius: 6, 
-    marginTop:5,
+    marginTop:10,
   },
 
   bottomText:{
