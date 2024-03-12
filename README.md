@@ -19,7 +19,7 @@
 Clone the SnapNote
 
 ```bash
-  git clone https://github.com/EdgarHdzHdz17/Snap-App.git
+  git clone https://github.com/EdgarHdzHdz17/SnapNote.git
 ```
 
 Go to the project directory
