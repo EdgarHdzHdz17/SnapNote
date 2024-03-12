@@ -5,13 +5,13 @@
 </div>
 </br>
 <div align="center">
-  <img src="https://github.com/EdgarHdzHdz17/Snap-App/assets/47467891/efec7122-6d59-4d07-bbfd-85170635f169">
+  <img src="https://github.com/EdgarHdzHdz17/SnapNote/assets/47467891/c654cf31-fcfe-4376-9278-5e22d1f08991">
 </div>
 
 ## Screenshots
 <div align="center">
-  <img src="https://github.com/EdgarHdzHdz17/SnapNote/assets/47467891/fbd9822c-adb1-4187-93bb-511ebdfaac5d" width="45%">
-  <img src="https://github.com/EdgarHdzHdz17/SnapNote/assets/47467891/faa4d376-4e56-4791-8d78-3771c439e293" width="45%">
+  <img src="https://github.com/EdgarHdzHdz17/SnapNote/assets/47467891/fbd9822c-adb1-4187-93bb-511ebdfaac5d" width="80%">
+  <img src="https://github.com/EdgarHdzHdz17/SnapNote/assets/47467891/faa4d376-4e56-4791-8d78-3771c439e293" width="80%">
 </div>
 
 ## Run Locally
