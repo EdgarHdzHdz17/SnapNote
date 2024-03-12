@@ -7,6 +7,7 @@
 <div align="center">
   <img src="https://github.com/EdgarHdzHdz17/Snap-App/assets/47467891/efec7122-6d59-4d07-bbfd-85170635f169">
 </div>
+
 ## Screenshots
 <div align="center">
   <img src="https://github.com/EdgarHdzHdz17/Snap-App/assets/47467891/9dfabfd1-8cd8-4a51-a4f1-9a7d49c597b3" width="20%">
