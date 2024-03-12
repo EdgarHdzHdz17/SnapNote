@@ -1,7 +1,7 @@
-# Snap-App
+# SnapNote
 
 <div align="justify">
-  Snap-App is a note-making app, developed in Expo React Native.
+  SnapNote is a note-making app, developed in Expo React Native.
 </div>
 </br>
 <div align="center">
