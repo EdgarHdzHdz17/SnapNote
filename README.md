@@ -10,8 +10,8 @@
 
 ## Screenshots
 <div align="center">
-  <img src="https://github.com/EdgarHdzHdz17/Snap-App/assets/47467891/9dfabfd1-8cd8-4a51-a4f1-9a7d49c597b3" width="20%">
-  <img src="https://github.com/EdgarHdzHdz17/Snap-App/assets/47467891/15f69fb0-7d3c-4040-8348-65dd1506549c" width="20%">
+  <img src="https://github.com/EdgarHdzHdz17/SnapNote/assets/47467891/fbd9822c-adb1-4187-93bb-511ebdfaac5d" width="45%">
+  <img src="https://github.com/EdgarHdzHdz17/SnapNote/assets/47467891/faa4d376-4e56-4791-8d78-3771c439e293" width="45%">
 </div>
 
 ## Run Locally
