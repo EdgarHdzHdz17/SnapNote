@@ -1,9 +1,14 @@
-import { Text, View, TouchableOpacity, TextInput,Image,} from "react-native";
+import {
+  Text,
+  View,
+  TouchableOpacity,
+  TextInput,
+  Image,
+  Alert,
+} from "react-native";
 import styles from "../HomeScreen/HomeScreenStyles";
 import React, { useState } from "react";
 import MyModal from "../ModalUser/ModalUserScreen";
-import { SaveNote } from '../../components/SaveNote';
-import { ClearNote } from "../../components/ClearNote";
 
 export default function HomeScreen() {
   const [textName, setTextName] = useState("");
@@ -13,11 +18,24 @@ export default function HomeScreen() {
   const [selectedNote, setSelectedNote] = useState(null);
 
   const saveNote = () => {
-    SaveNote(textName, setTextName, textNote, setTextNote, notes, setNotes);
+    if (textName.trim() === "") {
+      Alert.alert("Need Name Note", "Add a name.");
+    } else if (textNote.trim() === "") {
+      Alert.alert("Need Text Note", "Add a text.");
+    } else {
+      setTextName("");
+      setTextNote("");
+      const newNote = { name: textName, text: textNote };
+      console.log("New Note: ", newNote);
+      setNotes((prevNotes) => [...prevNotes, newNote]);
+    }
   };
 
   const clearNote = () => {
-    ClearNote(textName, setTextName, textNote, setTextNote);
+    setTextName("");
+    setTextNote("");
+    Alert.alert("The note was cleaned.");
+    console.log("Clear Note...");
   };
 
   const handleNameSelected = (name) => {
@@ -46,11 +64,12 @@ export default function HomeScreen() {
 
         <View style={styles.iconUser}>
           <TouchableOpacity onPress={openModal}>
-            <Image style={styles.imageIcon} source={require('../HomeScreen/HomeScreenImages/SnapNoteIcon.png')} />
+            <Image
+              style={styles.imageIcon}
+              source={require("../HomeScreen/HomeScreenImages/SnapNoteIcon.png")}
+            />
           </TouchableOpacity>
-          
         </View>
-        
       </View>
 
       <View style={styles.noteContainer}>
@@ -79,8 +98,12 @@ export default function HomeScreen() {
         </View>
       </View>
 
-      <MyModal modalVisible={modalVisible} closeModal={closeModal} notes={notes} onNameSelected={handleNameSelected}/>
-
+      <MyModal
+        modalVisible={modalVisible}
+        closeModal={closeModal}
+        notes={notes}
+        onNameSelected={handleNameSelected}
+      />
     </View>
   );
 }
